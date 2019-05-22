@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="474.0" prefWidth="599.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="software.ii.project.HomeScreenController">
+   <children>
+      <Label layoutX="113.0" layoutY="31.0" text="Customers" underline="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="452.0" layoutY="31.0" text="Appointments" underline="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="247.0" layoutY="14.0" text="Welcome!">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="addCustomerButton" layoutX="52.0" layoutY="287.0" mnemonicParsing="false" onAction="#addCustomerButtonHandler" text="Add" />
+      <Button fx:id="updateCustomerButton" layoutX="111.0" layoutY="287.0" mnemonicParsing="false" onAction="#updateCustomerButtonHandler" text="Update" />
+      <Button fx:id="deleteCustomerButton" layoutX="185.0" layoutY="287.0" mnemonicParsing="false" onAction="#deleteCustomerButtonHandler" text="Delete" />
+      <Button fx:id="addAppButton" layoutX="395.0" layoutY="325.0" mnemonicParsing="false" onAction="#addAppButtonHandler" text="Add" />
+      <Button fx:id="updateAppButton" layoutX="450.0" layoutY="325.0" mnemonicParsing="false" onAction="#updateAppButtonHandler" text="Update" />
+      <Button fx:id="deleteAppButton" layoutX="522.0" layoutY="325.0" mnemonicParsing="false" onAction="#deleteAppButtonHandler" text="Delete" />
+      <TextField fx:id="customerNameTextField" layoutX="87.0" layoutY="62.0" />
+      <TextField fx:id="customerAddressTextField" layoutX="87.0" layoutY="99.0" />
+      <TextField fx:id="customerPhoneTextField" layoutX="87.0" layoutY="138.0" />
+      <ComboBox fx:id="countryComboBox" layoutX="87.0" layoutY="176.0" onAction="#initializeCity" prefWidth="150.0" promptText="Choose a Country" />
+      <ComboBox fx:id="cityComboBox" layoutX="87.0" layoutY="215.0" prefWidth="150.0" promptText="Choose a City" />
+      <TextField fx:id="custIDTextField" layoutX="87.0" layoutY="253.0" prefHeight="25.0" prefWidth="150.0" promptText="Auto for new customers" />
+      <TextField fx:id="custIDAppsTextField" layoutX="414.0" layoutY="62.0" prefHeight="25.0" prefWidth="62.0" />
+      <TextField fx:id="appTypeTextField" layoutX="411.0" layoutY="99.0" />
+      <ComboBox fx:id="startHourComboBox" layoutX="331.0" layoutY="176.0" prefHeight="25.0" prefWidth="95.0" promptText="Hour" />
+      <ComboBox fx:id="startMinutesComboBox" layoutX="331.0" layoutY="215.0" prefHeight="25.0" prefWidth="95.0" promptText="Minutes" />
+      <ComboBox fx:id="endHourComboBox" layoutX="452.0" layoutY="176.0" prefHeight="25.0" prefWidth="95.0" promptText="Hour" />
+      <ComboBox fx:id="endMinutesComboBox" layoutX="452.0" layoutY="215.0" prefHeight="25.0" prefWidth="95.0" promptText="Minutes" />
+      <DatePicker fx:id="datePicker" layoutX="414.0" layoutY="253.0" prefHeight="25.0" prefWidth="121.0" promptText="Date" />
+      <TextField fx:id="appIDTextField" layoutX="414.0" layoutY="287.0" prefHeight="25.0" prefWidth="162.0" promptText="Auto for new appointments" />
+      <Label layoutX="28.0" layoutY="66.0" text="Name:" />
+      <Label layoutX="25.0" layoutY="103.0" text="Address:" />
+      <Label layoutX="30.0" layoutY="142.0" text="Phone:" />
+      <Label layoutX="289.0" layoutY="103.0" text="Appointment Type:" />
+      <Label layoutX="23.0" layoutY="180.0" text="Country:" />
+      <Label layoutX="37.0" layoutY="219.0" text="City:" />
+      <Label layoutX="3.0" layoutY="257.0" text="Customer ID:" />
+      <Label layoutX="323.0" layoutY="66.0" text="Customer ID:" />
+      <Label layoutX="365.0" layoutY="142.0" text="Start:" />
+      <Label layoutX="489.0" layoutY="142.0" text="End:" />
+      <Label layoutX="309.0" layoutY="291.0" text="Appointment ID:" />
+      <Button fx:id="thisWeekButton" layoutX="417.0" layoutY="400.0" mnemonicParsing="false" onAction="#thisWeekButtonHandler" text="This Week" />
+      <Button fx:id="thisMonthButton" layoutX="509.0" layoutY="400.0" mnemonicParsing="false" onAction="#thisMonthButtonHandler" text="This Month" />
+      <Label layoutX="271.0" layoutY="404.0" text="View appointments by:" />
+      <Label layoutX="40.0" layoutY="404.0" text="Generate Reports:" />
+      <ComboBox fx:id="reportComboBox" layoutX="12.0" layoutY="431.0" prefWidth="150.0" promptText="Choose a report" visibleRowCount="3" />
+      <Button fx:id="reportSubmitButton" layoutX="172.0" layoutY="431.0" mnemonicParsing="false" text="Submit" />
+      <Button fx:id="viewCustomersButton" layoutX="133.0" layoutY="354.0" mnemonicParsing="false" onAction="#viewCustomersButtonHandler" text="View Customers" />
+      <Label layoutX="31.0" layoutY="317.0" text="Note: Delete only requires Customer ID" />
+      <Label layoutX="353.0" layoutY="358.0" text="Note: Delete only requires Appointment ID" />
+   </children>
+</AnchorPane>
